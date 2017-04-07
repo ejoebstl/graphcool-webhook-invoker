@@ -10,6 +10,23 @@ Useful for testing, but please use with care.
 
 ## Usage
 
+#### As command line tool
+
+```sh
+npm install -g graphcool-webhook-invoker
+```
+
+```sh
+graphcool-webhook-invoker \
+    cj17fjzs741pu0113oub8rndw \ # The ID of your project 
+    cj17fk4k8b1750141v5mpai88 \ # The node ID to call the hook for
+    CREATE \ # The type of trigger to call the hook for
+    eyJhbGciOiJub25lIiwidHlwIj... # Your JWT access token
+```
+
+
+#### As module
+
 ```sh
 npm install --save graphcool-webhook-invoker
 ```
@@ -20,7 +37,7 @@ import invoke from 'graphql-webhook-invoker'
 const projectId = 'cj17fjzs741pu0113oub8rndw' // The ID of your project
 const nodeId = 'cj17fk4k8b1750141v5mpai88' // The node ID to call the hook for
 const trigger = 'CREATE' // The type of trigger to call the hook for
-const token = '00COFFEE' // Your JWT access token
+const token = 'eyJhbGciOiJub25lIiwidHlwIj...' // Your JWT access token
 
 invoke(projectId, nodeId, trigger, token)
     .catch(error => console.log('Oh no: ', error)) 
@@ -32,16 +49,11 @@ invoke(projectId, nodeId, trigger, token)
 
 This will example would call the `CREATE` webhook for the node with id `cj17fk4k8b1750141v5mpai88` of project `cj17fjzs741pu0113oub8rndw`, as if it was called by graphcool .
 
-
 ## Limitations
 
 `graphcool-webhook-invoker` is built upon undocumented APIs of graphcool. It might break without notice. 
 
 Also, this project uses a very hacky way of resolving fragments for the webhook payload. It will, besides other things, break as soon as there are unmatching curly braces (`{`, `}`) inside strings.
-
-## Why is this not a command line tool? 
-
-There is currently no standardized way of locally storing graphcool JWTs. This migth change in the future, so I don't want to create a pseudo-standard for it. 
 
 ## Why should I use this? 
 

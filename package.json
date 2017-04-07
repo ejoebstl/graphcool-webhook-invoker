@@ -12,6 +12,9 @@
     "type": "git",
     "url": "git+ssh://git@github.com/ejoebstl/graphcool-webhook-invoker.git"
   },
+  "bin": {
+    "graphcool-webhook-invoker": "./dist/cmd.js"
+  },
   "keywords": [
     "graphql",
     "graphcool",
