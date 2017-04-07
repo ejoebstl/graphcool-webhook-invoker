@@ -37,7 +37,7 @@ This will example would call the `CREATE` webhook for the node with id `cj17fk4k
 
 `graphcool-webhook-invoker` is built upon undocumented APIs of graphcool. It might break without notice. 
 
-Also, this project uses a very hacky way of resolving fragments for the webhook payload. It will break as soon as there are unmatching curly braces (`{`, `}`) inside strings.
+Also, this project uses a very hacky way of resolving fragments for the webhook payload. It will, besides other things, break as soon as there are unmatching curly braces (`{`, `}`) inside strings.
 
 ## Why is this not a command line tool? 
 
