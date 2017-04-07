@@ -1,0 +1,41 @@
+{
+  "name": "graphcool-webhook-invoker",
+  "version": "0.0.1",
+  "description": "Invoke webhooks from your command line without re-adding the data",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "mocha --require mocha-babel.js",
+    "compile": "babel -d dist/ src/",
+    "prepublish": "npm run compile"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ejoebstl/graphcool-webhook-invoker.git"
+  },
+  "keywords": [
+    "graphql",
+    "graphcool",
+    "mutation",
+    "testing",
+    "data"
+  ],
+  "author": "Emanuel Jöbstl",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ejoebstl/graphql-webhook-invoker/issues"
+  },
+  "homepage": "https://github.com/ejoebstl/graphql-webhook-invoker#readme",
+  "dependencies": {
+    "babel-runtime": "^6.23.0",
+    "chai": "^3.5.0",
+    "popsicle": "^9.1.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-plugin-transform-async-to-generator": "^6.22.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "mocha": "^3.2.0"
+  }
+}
