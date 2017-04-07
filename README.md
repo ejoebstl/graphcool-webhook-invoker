@@ -2,7 +2,7 @@
 
 # graphcool-webhook-invoker
 
-Test driven development in production, what do you want more? :rocket: :see_no_evil:
+Test driven development in production, what could go wrong? :rocket: :see_no_evil:
 
 Invokes [graphcool](http://graph.cool) webhooks with existing data, without modifying your precious data.
 
