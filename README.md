@@ -4,7 +4,7 @@
 
 Test driven development in production, what could go wrong? :rocket: :see_no_evil:
 
-Invokes [graphcool](http://graph.cool) webhooks with existing data, without modifying your precious data.
+Manually invokes [graphcool](http://graph.cool) webhooks with existing data.
 
 Useful for testing, but please use with care.  
 
