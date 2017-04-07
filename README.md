@@ -45,7 +45,7 @@ There is currently no standardized way of locally storing graphcool JWTs. This m
 
 ## Why should I use this? 
 
-Micro-service architectures that tie many services together are easy to build with graphcool. These services are usually connected via webhooks. Webhooks that are coming from graphcool might be hard to debug, since fireing a webhook requires mutation of the corresponding data. This tool allows you to fire a webhook for a node without touching the corresponding data. 
+Architectures that tie many services together are easy to build with graphcool. These services are usually connected via webhooks. Webhooks which are coming from graphcool might be painful to debug, since fireing a webhook requires mutation of the corresponding data. This tool allows you to fire a webhook for a node without touching the corresponding data. 
 
 While you should never use `graphcool-webhook-invoker` in production, it can be incredibly helpful when debugging webhooks. 
 
