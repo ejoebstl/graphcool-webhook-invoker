@@ -3,7 +3,7 @@ import createQueryResolver from './default-query-resolver.js'
 import { fetchNodeWithType, fetchNodeType } from './graphcool-fetch-node.js'
 const popsicle = require('popsicle');
 
-export function splitByParantheses(s) {
+export function splitByBraces(s) {
   let r = [] // Result
   let d = 0 // Depth
   let f = '' // Field
@@ -35,14 +35,14 @@ export function splitByParantheses(s) {
     }
   }
   if(d != 0 || v.trim() != '' || f.trim() != '') {
-    throw new Error('Syntax Error. Please keep in mind that parantheses inside strings will mess up this poor parser.')
+    throw new Error('Syntax Error. Please keep in mind that braces inside strings will mess up this poor parser.')
   }
   return r
 }
 
 async function resolveFragment(projectQueryResolver, nodeId, typename, fragment) {
-  const t = splitByParantheses(fragment)['']
-  const queries = splitByParantheses(t)
+  const t = splitByBraces(fragment)['']
+  const queries = splitByBraces(t)
 
   let res = {}
 
