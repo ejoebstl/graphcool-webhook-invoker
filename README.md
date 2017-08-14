@@ -1,3 +1,9 @@
+# Deprecated!
+
+This project is deprecated, since graph.cool moved away from webhooks forever. 
+
+---
+
 ![Build Status](https://travis-ci.org/ejoebstl/graphcool-webhook-invoker.svg?branch=master)
 
 # graphcool-webhook-invoker
